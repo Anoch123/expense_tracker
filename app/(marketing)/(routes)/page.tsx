@@ -1,5 +1,5 @@
 import React from 'react'
-import MainHero from './components/MainHero'
+import MainHero from '../components/MainHero'
 
 const MarketingPage = () => {
   return (
