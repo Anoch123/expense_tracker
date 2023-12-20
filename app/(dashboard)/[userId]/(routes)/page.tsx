@@ -1,15 +1,16 @@
-import { UserButton } from '@clerk/nextjs'
-import React from 'react'
+import { UserButton, auth } from '@clerk/nextjs'
 
-interface DashboardPageProps {
-    params : {userId: string}
-}
-
-const DashboardPage: React.FC<DashboardPageProps> = async ({params}) => {
-  
+const DashboardPage = async () => {
+  const { userId } = auth();
   return (
-    <div>Active active {params.userId}
-    <UserButton />
+    <div className="relative isolate px-6 lg:pt-0 md:pt-14 lg:px-8">
+      <div className="flex">
+        <div className="">
+          <h2 className='text-xl font-semibold'>Banking Dashboard</h2>
+          <span>hello Danushka</span>
+        </div>
+        <div className="flex-1 text-end">2023</div>
+      </div>
     </div>
   )
 }
